@@ -1,0 +1,43 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.Head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    background-image: url("../Images/chart-professor-a-bar-graph-shows-a-stocks-extremes-and-gaps.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Head h1 {
+    font-size: 50px;
+    background: -webkit-linear-gradient(#85e4ff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Headinfo{
+    display: flex;
+    font-size: 1.3rem;
+    list-style-type: none;
+}
+.Headinfo a{
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    margin: 0px 20px;
+    transition: all 0.2s;
+}
+.Headinfo a:hover{
+    color: royalblue;
+}
+.Headinfo .active{
+    color: white;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 3px black;
+}

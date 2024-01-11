@@ -1,0 +1,273 @@
+.Login-info {
+    background-image: url("../Images/Abstract-Bright-Blue-Geometric-Background.jpg");
+    height: 92.3vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 70vh;
+    width: 70vw;
+    border-radius: 10px;
+    border: 3px outset black;
+}
+
+.container2 {
+    position: absolute;
+    height: 70vh;
+    width: 70vw;
+    border-radius: 10px;
+    border: 3px outset black;
+    display: flex;
+    box-shadow: 3px 3px 10px white;
+}
+
+.left img {
+    height: 500px;
+    width: 700px;
+}
+
+.right {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.right p {
+    text-align: right;
+    padding-right: 35px;
+    padding-bottom: 90px;
+}
+
+.right p a {
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.right p a:hover {
+    color: blue;
+    font-size: 15.6px;
+}
+
+.right h1 {
+    font-size: 40px;
+}
+
+.right h2 {
+    font-weight: 200;
+    font-size: 15px;
+    padding-right: 180px;
+    padding-bottom: 45px;
+}
+
+.right input {
+    height: 35px;
+    margin: 5px 0;
+    padding: 0 30px;
+}
+
+.fa-user {
+    position: absolute;
+    z-index: 1;
+    top: 252px;
+    left: 745px;
+    color: royalblue;
+}
+
+.fa-lock {
+    position: absolute;
+    z-index: 1;
+    top: 295px;
+    left: 745px;
+}
+
+.login-btn {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-btn button {
+    margin: 0 20px;
+}
+
+.btn1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: blueviolet;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.btn2 {
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    padding: 13.5px 30px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.btn1:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 5px black;
+}
+
+.btn1:active {
+    transform: scale(0.95);
+    transition: none;
+}
+
+.btn2:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 5px black;
+}
+
+.btn2:active {
+    transform: scale(0.95);
+    transition: none;
+}
+
+.eye-icon {
+    position: absolute;
+    z-index: 1;
+    top: 297px;
+    left: 1005px;
+    transition: all 0.3s;
+}
+
+.eye-icon:hover {
+    color: royalblue;
+    cursor: pointer;
+}
+
+.forgotPassword {
+    text-align: center;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fa-exclamation {
+    color: rgb(0, 22, 90);
+    border: 4px solid rgb(0, 22, 90);
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+    border-radius: 50%;
+    box-shadow: 2px 1px 4px white;
+    text-align: center;
+}
+
+.forgotPassword h3 {
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+.forgotPassword p {
+    width: 300px;
+    text-align: center !important;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 100px;
+}
+
+.forgotPassword form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+.forgotPassword input{
+    margin-bottom: 20px;
+}
+
+.icon-envelope{
+    z-index: 1;
+    position: absolute;
+    top: 13px;
+    right: 265px;
+}
+
+.forgotPassword button {
+    font-size: 15px;
+    font-weight: 700;
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  background: #111;
+  cursor: pointer;
+  position:relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.forgotPassword button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 700%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.forgotPassword button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:rgb(255, 255, 255);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}

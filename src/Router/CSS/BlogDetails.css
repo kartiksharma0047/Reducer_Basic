@@ -1,0 +1,66 @@
+.user{
+    background-image: url("../Images/pngtree-company-profile-modern-business-image_720162.jpg");
+    height:92.2vh;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LoadBlog{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+    font-weight: bolder;
+}
+.userDetail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 450px;
+    box-shadow: 2px 3px 10px black;
+    position: relative;
+    padding-top: 150px;
+}
+.userDetail h1{
+    margin-bottom: 20px;
+}
+.userDetail h2{
+    margin-bottom: 15px;
+    text-align: center;
+}
+.userDetail p{
+    width: 400px;
+    text-align: center;
+}
+.fontBlog{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: 60px;
+    left: 145px;
+}
+.userbtn{
+    background-color:whitesmoke;
+    margin: 0 30px;
+    padding: 7px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 1px 2px 5px black;
+    font-size: 40px;
+    transition: all 0.3s;
+}
+.userbtn:hover{
+    background-color: rgb(211, 255, 240);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.userbtn:active{
+    transform: scale(0.9);
+}
