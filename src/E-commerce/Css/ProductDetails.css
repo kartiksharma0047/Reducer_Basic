@@ -1,0 +1,157 @@
+.Loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: bolder;
+    min-height: 90vh;
+}
+
+.productDetails {
+    margin: 0 50px;
+    padding-top: 3rem;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.DetailsLeft img {
+    height: 550px;
+    width: 500px;
+}
+
+.DetailsRight {
+    width: 40vw;
+    margin-left: 30px;
+}
+
+.DetailsRight h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 1px black;
+    margin-bottom: 20px;
+}
+
+.DetailsRight p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.DetailsRight h3 {
+    font-size: 2rem;
+    margin-bottom: 100px;
+}
+
+.DetailsRight span {
+    color: red;
+    font-size: 1.4rem;
+}
+
+.DetailsRight button {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 10px 30px;
+    color: white;
+    background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    letter-spacing: 0.05em;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.DetailsRight button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0.5em 1.5em -0.5em black;
+}
+
+.DetailsRight button:active {
+    transform: scale(0.9);
+    box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+@media screen and (max-width: 900px) {
+    .Loading {
+        font-size: 3rem;
+    }
+
+    .DetailsLeft img {
+        height: 350px;
+        width: 300px;
+    }
+
+    .DetailsRight {
+        width: 80vw;
+    }
+
+    .DetailsRight h1 {
+        font-size: 1.8rem;
+    }
+
+    .DetailsRight p {
+        font-size: 0.9rem;
+    }
+
+    .DetailsRight h3 {
+        font-size: 1.2rem;
+    }
+
+    .DetailsRight span {
+        font-size: 1rem;
+    }
+
+    .DetailsRight button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .Loading {
+        font-size: 2rem;
+    }
+    
+    .productDetails {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .DetailsRight {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        margin-left: 0px;
+    }
+
+    .DetailsLeft img {
+        height: 250px;
+        width: 200px;
+    }
+
+    .DetailsRight h1 {
+        margin-top: 30px;
+        font-size: 1.3rem;
+    }
+
+    .DetailsRight p {
+        margin-bottom: 20px;
+        font-size: 0.6rem;
+    }
+
+    .DetailsRight span {
+        font-size: 0.9rem;
+    }
+
+    .DetailsRight h3 {
+        margin-bottom: 30px;
+    }
+
+    .DetailsRight button {
+        font-size: 10px;
+    }
+}
