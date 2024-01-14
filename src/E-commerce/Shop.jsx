@@ -23,7 +23,7 @@ function Shop() {
           setsData(categories);
         });
     }
-  }, []);
+  }, [categories]);
 
   function truncate(text) {
     let length = 50;
