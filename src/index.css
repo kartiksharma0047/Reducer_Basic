@@ -11,10 +11,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-<<<<<<< HEAD
-=======
-  -webkit-text-size-adjust: 100%;
->>>>>>> 1df3c4de411988f5c766900bc4effbd87eea4c9b
 }
 
 a {
