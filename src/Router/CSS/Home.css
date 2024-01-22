@@ -1,0 +1,87 @@
+.info-home{
+    background-image: url("../Images/how-to-read-a-bar-chart-57a0c31e3df78c3276ae83c3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 69.8vh;
+    text-align: right;
+    padding: 75px 200px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.info-home h1{
+    font-size: 40px;
+}
+.info-home p{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 150px;
+}
+.data a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    margin: 0px 20px;
+    background-color: #33b249;
+    padding: 5px 20px;
+    border-radius: 50px;
+    transition: all 0.4s;
+    font-size: 25px;
+}
+.data a:hover{
+    background-color: #19dc39;
+    color: black;
+}
+.home-end{
+    height:22.3vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.Query{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    text-align: left;
+}
+.Query ul{
+    display: flex;
+    list-style-type: none;
+    font-size: 20px;
+    border-top: 1px solid white;
+    padding-top: 15px;
+    padding-right: 100px;
+}
+.Query ul li{
+    padding: 0px 25px 0px 0px;
+}
+.Query ul li a{
+    transition: all 0.3s;
+    text-decoration: none;
+    color: white;
+}
+.Query ul li a:hover{
+   color: royalblue;
+}
+.Query div{
+    display: flex;
+    font-size: 20px;
+    border-top:1px solid white ;
+    padding-left: 100px;
+}
+.Query div a{
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+    padding: 15px 0px 0 20px;
+    transition: all 0.3s;
+}
+.Query div a:hover{
+    transform: scale(1.11);
+    color: royalblue;
+}
+.home-end p{
+    margin-top: 7px;
+}

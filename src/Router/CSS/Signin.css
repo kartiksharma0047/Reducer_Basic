@@ -1,0 +1,256 @@
+.Sign-info {
+    background-image: url("../Images/Background_img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 92.2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-container {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 70vh;
+    width: 70vw;
+    border-radius: 10px;
+    border: 3px outset black;
+    box-shadow: 3px 3px 10px white;
+    display: flex;
+    overflow: hidden;
+}
+
+/* Left Part */
+.sign-box1 {
+    width: 35vw;
+    height: 70vh;
+}
+
+.slides {
+    width: 35vw;
+    height: 70vh;
+    display: flex;
+}
+
+.slider {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    overflow: hidden;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 100%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 35vw;
+    height: 70vh;
+}
+
+/* manual navigation */
+.navigation-manual {
+    position: absolute;
+    width: 35vw;
+    margin-top: -33px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 3px solid #40d3dc;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    box-shadow: 0 0 5px #40d3dc;
+    transition: all 0.5s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #40d3dc;
+    box-shadow: 0 0 20px white;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -100%;
+}
+
+#radio3:checked~.first {
+    margin-left: -200%;
+}
+
+#radio4:checked~.first {
+    margin-left: -300%;
+}
+
+/* Auto navigation */
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 35vw;
+    justify-content: center;
+    margin-top: 484px;
+}
+
+.navigation-auto div {
+    border: 2px solid #40d3dc;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 42px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background: #40d3dc;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background: #40d3dc;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background: #40d3dc;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background: #40d3dc;
+}
+
+/* Right side */
+.sign-box2 {
+    padding-left: 30px;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.sign-box2 h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.sign-box2 input {
+    margin: 5px 0;
+    height: 25px;
+    border: 1px solid black;
+}
+
+.name_entry {
+    width: 13vw;
+    display: flex;
+}
+
+.name_entry input {
+    margin-right: 12px;
+}
+
+#emailname,
+#passwordname {
+    width: 25.4vw;
+}
+
+.sign-box2 button {
+    width: 25.4vw;
+    margin: 5px 0px;
+    height: 25px;
+    background-color: royalblue;
+    border: none;
+    color: white;
+    font-weight: 900;
+    word-spacing: 3px;
+    transition: all 0.3s;
+    margin-bottom: 10px;
+}
+
+.sign-box2 button:hover {
+    cursor: pointer;
+    background-color: rgb(7, 50, 178);
+}
+
+.sign-box2 button:active {
+    background-color: black;
+    transition: none;
+}
+
+.sign-box2 p {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.sign-box2 p a {
+    text-decoration: none;
+    color: rgb(0, 33, 130);
+}
+
+.or {
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+    width: 25.4vw;
+}
+
+.or h3 {
+    margin: 0 5px;
+}
+
+.or p {
+    height: 0;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.otherOption {
+    display: flex;
+    align-items: center;
+    width: 25.4vw;
+    justify-content: center;
+}
+
+.otherOption h1 {
+    border-radius: 10px;
+    font-size: 13px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.face_book-logo {
+    height: 25px;
+    width: 25px;
+    color: rgb(2, 38, 146);
+    margin-right: 10px;
+}
+
+.fa-google {
+    height: 25px;
+    width: 25px;
+    color: #40e76d;
+    margin-right: 10px;
+}
+
+.otherOption-h1 {
+    margin-right: 5px;
+}
+
+.otherOption-h2 {
+    margin-left: 5px;
+}

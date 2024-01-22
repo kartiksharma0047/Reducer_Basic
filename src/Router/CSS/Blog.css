@@ -1,0 +1,87 @@
+.BlogPage{
+    background-image: linear-gradient(-45deg,rgb(35, 35, 200),rgb(72, 72, 206),rgb(127, 156, 244),rgb(60, 222, 189));
+}
+.BlogInfo{
+    padding-top: 50px;
+    padding-left: 85px;
+    color: white;
+}
+.BlogInfo h1{
+    font-size: 7rem;
+    text-shadow: 4px 4px 5px black;
+}
+.BlogInfo p{
+    text-shadow: 2px 2px 2px black;
+    margin-top: 20px;
+    font-size: 18px;
+    width: 700px;
+    margin-bottom: 40px;
+}
+.Blogbtn{
+    display: flex;
+    align-items: center;
+}
+.Blogbtn a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    padding: 5px 13px;
+    border-radius: 15px;
+}
+.Blogbtn a:hover{
+    transform: scale(1.06);
+    box-shadow: 2px 3px 5px black;
+}
+.aboutbtn{
+    border: 2px solid white;
+    margin-right: 20px;
+    transition: all 0.5s;
+}
+.aboutbtn:hover{
+    color: black;
+    border-color: black;
+}
+.contactbtn{
+    margin-left: 20px;
+    background-color: royalblue;
+    transition: all 0.5s;
+}
+.contactbtn:hover{
+    background-color: blue;
+}
+.BlogPage .line{
+    margin: 40px 85px;
+    margin-top: 70px;
+    border: 1px solid black;
+}
+.BlogList{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+.BlogList a{
+    text-decoration: none;
+    color: black;
+    width: 230px;
+    margin: 20px 25px;
+    padding: 25px 20px;
+    background-color: white;
+    height: 280px;
+    transition: 0.5s all;
+}
+.BlogList a:hover{
+    transform: scale(1.04);
+    background-color: rgb(167, 189, 255);
+    box-shadow: 5px 5px 5px black;
+}
+.BlogList a h1{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.BlogList img{
+    border-radius: 60%;
+    height: 100px;
+    width: 100px;
+}

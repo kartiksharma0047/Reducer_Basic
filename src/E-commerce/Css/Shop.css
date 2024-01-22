@@ -213,7 +213,6 @@
     .ItemList li {
         margin: 1px 0;
     }
-
     .ItemList li a {
         width: 130px;
         height: 150px;
@@ -241,7 +240,6 @@
         font-size: 0.4rem;
         font-weight: 900;
     }
-
     .ItemCategories {
         height: 35px;
         display: flex;

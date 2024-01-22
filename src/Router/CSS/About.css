@@ -1,0 +1,50 @@
+.About-info{
+    background-color: black;
+    color: white;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 92.1vh;
+}
+.About-info h2{
+    font-size: 70px;
+    text-align: center;
+    width: 47rem;
+    padding-bottom: 140px;
+}
+.About-info ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+}
+.About-info ul li{
+    width: 380px;
+    padding: 0 70px;
+    position: relative;
+}
+.About-info ul h1{
+    font-size: 50px;
+    position: relative;
+    overflow:hidden;
+}
+.About-info ul li img{
+    position: absolute;
+}
+.img1{
+    top: -25px;
+    right: 160px;
+}
+.img2{
+    top: -20px;
+    right: 220px;
+}
+.img3{
+    top: -20px;
+    right: 205px;
+}
+.img4{
+    top: -20px;
+    right: 165px;
+}
