@@ -614,7 +614,8 @@
     width: 50px;
     margin-right: 10px;
   }
-  .CartItemDetailRight{
+
+  .CartItemDetailRight {
     width: 82px;
   }
 
@@ -675,6 +676,7 @@
 
   .ItemPrice div h2 {
     font-size: 0.7rem;
+    font-weight: bolder;
   }
 
   .TotalPrice {
