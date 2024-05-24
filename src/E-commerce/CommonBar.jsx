@@ -21,7 +21,8 @@ function CommonBar() {
                 <li><NavLink to="/About">About</NavLink></li>
                 <li><NavLink to="/Services">Services</NavLink></li>
                 <li><NavLink to="/Shop">Shop</NavLink></li>
-                <li><NavLink to="Contact">Contact Us</NavLink></li>
+                <li><NavLink to="/Contact">Contact Us</NavLink></li>
+                <li><NavLink to="/Login">Login</NavLink></li>
             </ul>
         </nav>
     )

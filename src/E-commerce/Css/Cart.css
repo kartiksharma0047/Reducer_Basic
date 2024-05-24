@@ -1,6 +1,27 @@
-.CartLayout {
+.CartLayout{
   width: 90vw;
   margin: 4rem auto 2rem auto;
+}
+
+.EmptyCart{
+  width: 100%;
+  text-align: center;
+}
+.EmptyCart img{
+  height: 300px;
+  width: 300px;
+}
+.EmptyCart h1{
+  font-size: 2.7rem;
+  margin-bottom: 1.2rem;
+}
+
+.EmptyCart p{
+  font-size: 1.1rem;
+  
+}
+
+.CartItemLayout{
   display: flex;
 }
 

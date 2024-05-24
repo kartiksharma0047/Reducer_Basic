@@ -4,6 +4,8 @@ import { CartContext } from './FrontPage.jsx';
 import { CartCountContext } from './FrontPage.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faInfo, faShield } from '@fortawesome/free-solid-svg-icons';
+import EmptyCartImage from '../E-commerce/Images/Emptycart.png';
+
 
 function Cart() {
   const { cart, SetCart } = useContext(CartContext);
@@ -88,6 +90,7 @@ function Cart() {
       const count = countOccurrences(itemID);
       return { ...tempData, count };
     })
+    console.log(cartData)
 
     setCartData(cartData);
   }, [cart, data]);
@@ -125,106 +128,113 @@ function Cart() {
       return total + itemTotal;
     }, 0);
 
-    const tempDiscount = calculateDiscount(totalPrice);
+    const discount = calculateDiscount(totalPrice);
 
-    useEffect(() => {
-      SetDiscount(tempDiscount.toFixed(2));
-    }, [tempDiscount]);
-
-    return totalPrice.toFixed(2);
+    return { totalPrice: totalPrice.toFixed(2), discount: discount.toFixed(2) };
   };
 
 
   return (
     <div className='CartLayout'>
-      <ul className='CartItemDetail'>
-        {cartData && cartData.map((item, index) => (
-          <li key={index}>
-            <div className='CartItemDetailLeft'>
-              <div className='CartItemDetailLeftChild'>
-                <img src={item.image} alt={item.title} />
+      {cartData.length === 0 ? (
+        <div className='EmptyCart'>
+          <img src={EmptyCartImage} alt="imgEmptyCart" />
+          <h1>Your cart is empty</h1>
+          <p>Looks like you have not added anything to your cart. Go ahead & explore top categories</p>
+          <button>Go To Cart</button>
+        </div>
+      ) : (
+        <div className='CartItemLayout'>
+          <ul className='CartItemDetail'>
+            {cartData && cartData.map((item, index) => (
+              <li key={index}>
+                <div className='CartItemDetailLeft'>
+                  <div className='CartItemDetailLeftChild'>
+                    <img src={item.image} alt={item.title} />
+                  </div>
+                  <div className='CartItemDetailRightChild'>
+                    <h1>{item.title}</h1>
+                    <h2>$&nbsp;{item.price}</h2>
+                  </div>
+                </div>
+                <div className='CartItemDetailMid'>
+                  {item.count === 1 ? (
+                    <button disabled value="-">
+                      -
+                    </button>
+                  ) : (
+                    <button onClick={(e) => btnClicked(e, item.id, item.count, "-")}>
+                      -
+                    </button>
+                  )}
+                  <input type="text" value={countOccurrences(item.id)} disabled />
+                  {item.count === 99 ? (
+                    <button disabled value="+">
+                      +
+                    </button>
+                  ) : (
+                    <button onClick={(e) => btnClicked(e, item.id, item.count, "+")}>
+                      +
+                    </button>
+                  )}
+                </div>
+                <div className='CartItemDetailRight'>
+                  <h2 className='date'>Delivery by {calculateDeliveryDate(item.id)}</h2>
+                  <button onClick={() => RemoveItem(item.id, item.count)} className="button-pushable" role="button">
+                    <span className="button-shadow"></span>
+                    <span className="button-edge"></span>
+                    <span className="button-front text">
+                      Remove Item
+                    </span>
+                  </button>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <div className='PriceDetails'>
+            <div className='ItemPrice'>
+              <h1>PRICE DETAILS</h1>
+              <div className='Price'>
+                <h1>Price ({cartCount} item)</h1>
+                <h2>${PriceItem().totalPrice}</h2>
               </div>
-              <div className='CartItemDetailRightChild'>
-                <h1>{item.title}</h1>
-                <h2>$&nbsp;{item.price}</h2>
+              <div className='DiscountPrice'>
+                <h1>Discount</h1>
+                <h2>-${PriceItem().discount}</h2>
+              </div>
+              <div className='DeliveryPrice'>
+                <h1>Delivery Charges&nbsp;<FontAwesomeIcon title='Get Free Delivery On Order Above $250' icon={faInfo} /></h1>
+                {(Number(PriceItem().totalPrice) <= 250) ? (
+                  <h2>$5</h2>
+                ) : (
+                  <h2>
+                    <span className='underLine'>$5</span>&nbsp;
+                    <span className='GreenColor'>Free</span>
+                  </h2>
+                )}
+              </div>
+              <div className='TotalPrice'>
+                <h1>Total Amount</h1>
+                <h2>$ {(Number(PriceItem().totalPrice) <= 250) ? (Number(PriceItem().totalPrice) - Number(PriceItem().discount) + 5).toFixed(2) : (Number(PriceItem().totalPrice) - Number(PriceItem().discount)).toFixed(2)}</h2>
+              </div>
+              <div className='PriceHighlights'>
+                <h1>You will save ${discount} on this order</h1>
               </div>
             </div>
-            <div className='CartItemDetailMid'>
-              {item.count === 1 ? (
-                <button disabled value="-">
-                  -
-                </button>
-              ) : (
-                <button onClick={(e) => btnClicked(e, item.id, item.count, "-")}>
-                  -
-                </button>
-              )}
-              <input type="text" value={countOccurrences(item.id)} disabled />
-              {item.count === 99 ? (
-                <button disabled value="+">
-                  +
-                </button>
-              ) : (
-                <button onClick={(e) => btnClicked(e, item.id, item.count, "+")}>
-                  +
-                </button>
-              )}
+            <div className='PlaceOrder'>
+              <button>Place Order</button>
+              <div className='ExtraDetails'>
+                <div className='ShieldCheck'>
+                  <FontAwesomeIcon icon={faShield} />
+                  <FontAwesomeIcon icon={faCheck} />
+                </div>
+                <p>Safe and Secure Payments.Easy returns.100% Authentic products.</p>
+              </div>
             </div>
-            <div className='CartItemDetailRight'>
-              <h2 className='date'>Delivery by {calculateDeliveryDate(item.id)}</h2>
-              <button onClick={() => RemoveItem(item.id, item.count)} className="button-pushable" role="button">
-                <span className="button-shadow"></span>
-                <span className="button-edge"></span>
-                <span className="button-front text">
-                  Remove Item
-                </span>
-              </button>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <div className='PriceDetails'>
-        <div className='ItemPrice'>
-          <h1>PRICE DETAILS</h1>
-          <div className='Price'>
-            <h1>Price ({cartCount} item)</h1>
-            <h2>${PriceItem()}</h2>
-          </div>
-          <div className='DiscountPrice'>
-            <h1>Discount</h1>
-            <h2>-${discount}</h2>
-          </div>
-          <div className='DeliveryPrice'>
-            <h1>Delivery Charges&nbsp;<FontAwesomeIcon title='Get Free Delivery On Order Above $250' icon={faInfo}/></h1>
-            {(Number(PriceItem()) <= 250) ? (
-              <h2>$5</h2>
-            ) : (
-              <h2>
-                <span className='underLine'>$5</span>&nbsp;
-                <span className='GreenColor'>Free</span>
-              </h2>
-            )}
-          </div>
-          <div className='TotalPrice'>
-            <h1>Total Amount</h1>
-            <h2>$ {(Number(PriceItem()) <= 250) ? (Number(PriceItem())-discount+5).toFixed(2) :(Number(PriceItem())-discount).toFixed(2)}</h2>
-          </div>
-          <div className='PriceHighlights'>
-            <h1>You will save ${discount} on this order</h1>
           </div>
         </div>
-        <div className='PlaceOrder'>
-          <button>Place Order</button>
-          <div className='ExtraDetails'>
-            <div className='ShieldCheck'>
-              <FontAwesomeIcon icon={faShield} />
-              <FontAwesomeIcon icon={faCheck} />
-            </div>
-            <p>Safe and Secure Payments.Easy returns.100% Authentic products.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+      )}
+    </div >
   );
 }
 
