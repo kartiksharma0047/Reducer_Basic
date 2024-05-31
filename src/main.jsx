@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom/client'
 // import { Provider } from 'react-redux'
 
 // Change the location of file
-import App from './ReactForm/Form.jsx'
+import App from './E commerce/FrontPage'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
